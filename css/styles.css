@@ -4,6 +4,7 @@ body{
 
     color: black;
 
+/*    About me section */
 }
 .profile-picture {
     float: left;
@@ -14,4 +15,27 @@ body{
     object-fit: cover;
     border: 3px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+}
+
+/* Photography Section */
+#photography {
+    margin-top: 2em;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.gallery-photo {
+    width: calc(33% - 1em);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
