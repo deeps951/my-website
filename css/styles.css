@@ -39,3 +39,12 @@ body{
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
+.tabs {
+    overflow: hidden;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}

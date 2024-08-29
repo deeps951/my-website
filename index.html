@@ -4,43 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Page</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your custom styles -->
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+  <style>
+    .profile-picture {
+      border: 3px solid #333; /* Dark border color */
+    }
+  </style>
 </head>
-<body>
-<header>
-  <h1>Welcome to My Website</h1>
-  <p>This is a simple website hosted on GitHub Pages.</p>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Header -->
+<header class="bg-blue-600 text-white text-center py-8">
+  <div class="container mx-auto">
+    <h1 class="text-4xl font-bold">Welcome to My GitHub Page</h1>
+  </div>
 </header>
 
 <!-- About Me Section -->
-<section id="about-me">
-  <h2>About Me</h2>
-  <img src="https://avatars.githubusercontent.com/deeps951" alt="My Profile Picture" class="profile-picture">
-  <p>Hi, I'm Andrew Cox, a passionate web developer with a love for creating modern, responsive websites. I have experience in HTML5, CSS, and JavaScript, and I'm constantly learning new technologies to improve my skills.</p>
-  <p>In my free time, I enjoy coding, exploring new web technologies, and contributing to open-source projects.</p>
-  <p>Feel free to connect with me on <a href="https://github.com/deeps951">GitHub</a>!</p>
+<section id="about-me" class="py-8 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <div class="flex items-center mb-6">
+      <img src="https://avatars.githubusercontent.com/deeps951" alt="My Profile Picture" class="profile-picture w-40 h-40 rounded-full object-cover shadow-md mr-4">
+      <div>
+        <p class="mb-2">Hi, I'm Andrew Cox, a passionate web developer with a love for creating modern, responsive websites. I have experience in HTML5, CSS, and JavaScript, and I'm constantly learning new technologies to improve my skills.</p>
+        <p class="mb-2">In my free time, I enjoy coding, exploring new web technologies, and contributing to open-source projects.</p>
+        <p>Feel free to connect with me on <a href="https://github.com/deeps951" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">GitHub</a>!</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Photography Section -->
-<section id="photography">
-  <h2>Photography</h2>
-  <p>Photography is one of my passions. I love capturing the beauty of the world through my lens, whether it's landscapes, portraits, or urban scenes. Below are a few examples of my work:</p>
-
-  <!-- Photo Gallery -->
-  <div class="photo-gallery">
-    <img src="https://images.pexels.com/photos/26773393/pexels-photo-26773393/free-photo-of-view-of-waves-washing-up-the-beach.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Description of Photo 1" class="gallery-photo" loading="lazy">
-    <img src="https://images.pexels.com/photos/11429760/pexels-photo-11429760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Description of Photo 2" class="gallery-photo" loading="lazy">
-    <img src="https://images.pexels.com/photos/2424926/pexels-photo-2424926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Description of Photo 3" class="gallery-photo" loading="lazy">
-    <!-- Add more images as needed -->
+<section id="photography" class="py-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-semibold mb-4">Photography</h2>
+    <p class="mb-4">Photography is one of my passions...</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <img src="path/to/photo1.jpg" alt="Description of Photo 1" class="w-full h-60 object-cover rounded-lg shadow-md">
+      <img src="path/to/photo2.jpg" alt="Description of Photo 2" class="w-full h-60 object-cover rounded-lg shadow-md">
+      <img src="path/to/photo3.jpg" alt="Description of Photo 3" class="w-full h-60 object-cover rounded-lg shadow-md">
+    </div>
   </div>
-
-  <p>For more of my photography, you can visit my full <a href="link-to-photography-portfolio">portfolio here</a>.</p>
 </section>
-<footer>
-  <p>&copy; 2024 deeps951</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>Some text about London.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Some text about Paris.</p>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-200 text-center py-4">
+  <div class="container mx-auto">
+    <p class="mb-0">&copy; 2024 deeps951</p>
+  </div>
 </footer>
 
-<script src="js/script.js"></script>
 </body>
 </html>
